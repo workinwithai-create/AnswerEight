@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AnswerEight — second-verse desk</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <div>
+      <p class="eyebrow">WorkinWithAI · second verse</p>
+      <h1>AnswerEight</h1>
+      <p class="lede">Verse two is not a reprint. Side A is the verse you already have. Side B answers it — thinner kit, walking upright, nylon reply, violin in the dry room — so chorus two is necessary.</p>
+    </div>
+    <p id="status" class="status">Tap to start audio</p>
+  </header>
+
+  <section class="transport">
+    <button id="tap" type="button">Tap to start audio</button>
+    <button id="playA" type="button">Play A · reprint</button>
+    <button id="playB" type="button">Play B · answer</button>
+    <button id="stop" type="button">Stop</button>
+    <label>BPM <input id="bpm" type="number" min="60" max="180" value="98" /></label>
+    <label>Key
+      <select id="key"></select>
+    </label>
+    <label class="grow">Chords <input id="chords" type="text" value="Am F C G" spellcheck="false" /></label>
+    <label>Bars <input id="bars" type="number" min="4" max="16" value="8" /></label>
+  </section>
+
+  <p class="ios">iOS silent switch mutes Web Audio. This is a desk, not a keyboard instrument — no hardware MIDI required.</p>
+
+  <section>
+    <h2>Recipes</h2>
+    <div id="recipes" class="cards"></div>
+  </section>
+
+  <section>
+    <h2>Chairs</h2>
+    <div id="mutes" class="mutes"></div>
+  </section>
+
+  <section>
+    <h2>Bars</h2>
+    <div id="barsView" class="bars"></div>
+    <p id="playhead" class="playhead">Stopped</p>
+  </section>
+
+  <section class="export">
+    <button id="wav" type="button">Export answer WAV</button>
+    <button id="wavTail" type="button">Export with tail</button>
+    <button id="mid" type="button">Export MIDI</button>
+    <button id="copy" type="button">Copy punch list</button>
+    <pre id="punch"></pre>
+  </section>
+
+  <footer>
+    <p>Free desk. Live FluidR3 piano, upright bass, nylon guitar, violin, trumpet, acoustic kit. Pinned to PreEight <code>d58301e4</code>. Not Unravel, TagFour, FloorEight, or PreEight.</p>
+  </footer>
+  <script src="app.js"></script>
+</body>
+</html>

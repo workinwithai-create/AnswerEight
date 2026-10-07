@@ -1,0 +1,54 @@
+:root {
+  --bg: #14110e;
+  --ink: #f3eadf;
+  --muted: #b7a898;
+  --line: #3a3128;
+  --accent: #e07a3d;
+  --a: #6d8f72;
+  --b: #c9843a;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: "Iowan Old Style", Palatino, Georgia, serif;
+  background: var(--bg);
+  color: var(--ink);
+  padding: 28px 22px 64px;
+  max-width: 1080px;
+}
+header { display: flex; justify-content: space-between; gap: 24px; align-items: end; }
+.eyebrow { letter-spacing: 0.14em; text-transform: uppercase; font-size: 12px; color: var(--accent); margin: 0; }
+h1 { font-weight: 500; font-size: 42px; margin: 4px 0; }
+h2 { font-size: 16px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+.lede { max-width: 62ch; color: var(--muted); line-height: 1.45; }
+.status { border: 1px solid var(--line); padding: 10px 12px; min-width: 180px; }
+.transport, .mutes { display: flex; flex-wrap: wrap; gap: 10px; align-items: end; }
+button, input, select {
+  background: #221c17;
+  color: var(--ink);
+  border: 1px solid var(--line);
+  padding: 10px 12px;
+  font: inherit;
+}
+button { cursor: pointer; }
+button:hover { border-color: var(--accent); }
+label { display: flex; flex-direction: column; gap: 4px; font-size: 13px; color: var(--muted); }
+.grow { flex: 1; min-width: 220px; }
+.ios { color: var(--muted); font-size: 13px; }
+.cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 8px; }
+.card { text-align: left; }
+.card.on { border-color: var(--accent); background: #2c221a; }
+.card b { display: block; }
+.card span { color: var(--muted); font-size: 13px; }
+.bars { display: grid; grid-template-columns: repeat(8, 1fr); gap: 6px; }
+.bar { border: 1px solid var(--line); padding: 8px; min-height: 64px; }
+.bar.a { border-color: var(--a); }
+.bar.b { border-color: var(--b); }
+.bar.active { background: #3a2a1c; }
+.playhead, pre { color: var(--muted); }
+pre { white-space: pre-wrap; border: 1px solid var(--line); padding: 12px; }
+footer { margin-top: 28px; color: var(--muted); font-size: 14px; }
+@media (max-width: 720px) {
+  header { flex-direction: column; align-items: start; }
+  .bars { grid-template-columns: repeat(4, 1fr); }
+}
